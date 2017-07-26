@@ -6,11 +6,27 @@ import "rxjs";
 export class UserService {
   constructor(private _http: Http) {}
 
-  create(newUser) {
+  create(user) {
+    return this._http.post("/users", user).map(data => data.json()).toPromise();
+  }
+
+  login(user) {
     return this._http
-      .post("/users", newUser)
+      .post("/sessions", user)
       .map(data => data.json())
       .toPromise();
   }
 
-@Injectable()
+  logout() {
+    localStorage.removeItem("currentUser");
+    return this._http.delete("/sessions").map(data => data.json()).toPromise();
+  }
+
+  setCurrentUser(user) {
+    localStorage.setItem("currentUser", JSON.stringify(user));
+  }
+
+  getCurrentUser() {
+    return JSON.parse(localStorage.getItem("currentUser"));
+  }
+}
