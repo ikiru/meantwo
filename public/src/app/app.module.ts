@@ -17,7 +17,7 @@ import { UserService } from "./user.service";
 @NgModule({
   declarations: [AppComponent, LoginComponent, DashboardComponent],
   imports: [BrowserModule, NgbModule.forRoot(), FormsModule, HttpModule],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

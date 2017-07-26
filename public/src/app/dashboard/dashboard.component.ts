@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Http } from "@angular/http";
 import { UserService } from "../user.service";
+import { Router } from "@angular/router";
 
 import "rxjs";
 
