@@ -20,5 +20,24 @@ module.exports = {
       }
       return res.json(question);
     });
-  }
-};
+  },
+
+
+update: function(req, res){
+  Question.findbyIdAndUpdate(req.body, function(err, question){
+    if (err) {
+      return res.json(err);
+    }
+    return res.json(question);
+  })
+}
+
+
+// .populate ({
+//   path: 'answer',
+//   model: 'Answer',
+//   populate:{
+//     path: 'user',
+//     model:'User'
+//   }
+// // })
