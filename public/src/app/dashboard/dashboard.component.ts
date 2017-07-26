@@ -11,7 +11,7 @@ import "rxjs";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  constructor(private _userService: UserService, private router: Router) {}
 
   ngOnInit() {}
 
