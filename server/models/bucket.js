@@ -24,11 +24,11 @@ let BucketSchema = new mongoose.Schema(
       type: String
     },
 
-    userselected:{
-      
-    }type: String
+    userselected: {
+      type: String
+    }
   },
   { timestamps: true }
 );
 
-mongoose.model("Question", QuestionSchema);
+mongoose.model("Bucket", BucketSchema);

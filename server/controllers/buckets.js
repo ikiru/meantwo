@@ -39,7 +39,7 @@ update: function(req, res){
       return res.json(err);
     }
     return res.json(bucket);
-  })
+  });
 }
 
 
