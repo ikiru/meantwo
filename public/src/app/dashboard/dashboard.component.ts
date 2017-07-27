@@ -11,9 +11,16 @@ import "rxjs";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
+  currentUser = {};
   constructor(private _userService: UserService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getCurrentUser();
+  }
+
+  getCurrentUser() {
+    this.currentUser = this._userService.getCurrentUser();
+  }
 
   logout() {
     this._userService.logout();

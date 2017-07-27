@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     return this._userService
       .create(this.newUser)
       .then(user => {
+        console.log(user);
         if (user.errors) {
           //create front-end error messages
         } else {
