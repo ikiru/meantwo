@@ -12,9 +12,9 @@ module.exports = function(app) {
   app.get("/session", Users.session);
 
   // question routing
-  app.get("/question", Questions.index);
-  app.post("/question", Questions.create);
-  app.patch("/question/:id", Question.update);
+  app.get("/bucket", Buckets.index);
+  app.post("/bucket", Buckets.create);
+  // app.patch("/question/:id", Buckets.update);
 
   // Path to the Angular Routing
   app.all("*", function(req, res, next) {

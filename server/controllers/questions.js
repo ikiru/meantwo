@@ -1,34 +1,34 @@
 let mongoose = require("mongoose");
-let Question = mongoose.model("Question");
+let Bucket = mongoose.model("Bucket");
 
 module.exports = {
   // index to test with postman
   index: function(req, res) {
-    question.find({}, function(err, question) {
+    Bucket.find({}, function(err, bucket) {
       if (err) {
         return res.json(err);
       }
-      return res.json(question);
+      return res.json(bucket);
     });
   },
 
   // Create a question => sends to DB <= newly created question
   create: function(req, res) {
-    Question.create(req.body, function(err, question) {
+    Bucket.create(req.body, function(err, bucket) {
       if (err) {
         return res.json(err);
       }
-      return res.json(question);
+      return res.json(bucket);
     });
   },
 
 
 update: function(req, res){
-  Question.findbyIdAndUpdate(req.params.id, function(err, question){
+  Bucket.findbyIdAndUpdate(req.params.id, function(err, bucket){
     if (err) {
       return res.json(err);
     }
-    return res.json(question);
+    return res.json(bucket);
   })
 }
 
