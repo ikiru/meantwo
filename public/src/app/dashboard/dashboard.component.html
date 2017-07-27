@@ -17,7 +17,7 @@
         <input type="text" name="title" value="" placeholder="Title" [(ngModel)]="newItem.title">
         <p *ngFor="let error of errors" class="error">{{error}}</p>
         <input type="text" name="description" value="" placeholder="Description" [(ngModel)]="newItem.description">
-        <select class="form-control" name=""></select>
+        <select class="form-control" name="" *ngFor="#user of users ";>{{user}}</select>
         <button type="submit" class="btn btn-default">Add to List</button>
       </div>
     </form>

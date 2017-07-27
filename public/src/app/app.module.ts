@@ -14,7 +14,7 @@ import { ListComponent } from "./list/list.component";
 
 // Services
 import { UserService } from "./user.service";
-
+import { BucketService } from "./bucket.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,7 @@ import { UserService } from "./user.service";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [UserService, BucketService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

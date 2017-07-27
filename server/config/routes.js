@@ -12,7 +12,7 @@ module.exports = function(app) {
   // Session routing
   app.get("/session", Users.session);
 
-  // question routing
+  // Bucket routing
   app.get("/bucket", Buckets.index);
   app.post("/bucket", Buckets.create);
   app.patch("/bucket/:id", Buckets.update);

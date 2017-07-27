@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-// MOdel creation and validation
+// Model creation and validation
 let UserSchema = new mongoose.Schema(
   {
     name: {
