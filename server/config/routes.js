@@ -14,6 +14,7 @@ module.exports = function(app) {
   // question routing
   app.get("/question", Questions.index);
   app.post("/question", Questions.create);
+  app.patch("/question/:id", Question.update);
 
   // Path to the Angular Routing
   app.all("*", function(req, res, next) {

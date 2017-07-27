@@ -24,7 +24,7 @@ module.exports = {
 
 
 update: function(req, res){
-  Question.findbyIdAndUpdate(req.body, function(err, question){
+  Question.findbyIdAndUpdate(req.params.id, function(err, question){
     if (err) {
       return res.json(err);
     }
