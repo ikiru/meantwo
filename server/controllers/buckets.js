@@ -32,22 +32,12 @@ module.exports = {
     });
   },
 
-
-update: function(req, res){
-  Bucket.findbyIdAndUpdate(req.params.id, function(err, bucket){
-    if (err) {
-      return res.json(err);
-    }
-    return res.json(bucket);
-  });
-}
-
-
-// .populate ({
-//   path: 'answer',
-//   model: 'Answer',
-//   populate:{
-//     path: 'user',
-//     model:'User'
-//   }
-// // })
+  update: function(req, res) {
+    Bucket.findbyIdAndUpdate(req.params.id, function(err, bucket) {
+      if (err) {
+        return res.json(err);
+      }
+      return res.json(bucket);
+    });
+  }
+};

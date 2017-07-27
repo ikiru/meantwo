@@ -1,6 +1,6 @@
 let path = require("path");
 let Users = require("./../controllers/users");
-let Bucket = require("./../controllers/buckets");
+let Buckets = require("./../controllers/buckets");
 
 module.exports = function(app) {
   // User  routing
