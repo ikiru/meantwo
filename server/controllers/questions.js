@@ -22,6 +22,16 @@ module.exports = {
     });
   },
 
+  // Show: grabs all records by id => controller
+  show: function(req, res) {
+    Bucket.findbyId(req.param.id, function(err, user) {
+      if (err) {
+        return res.json(err);
+      }
+      return res.json(user);
+    });
+  },
+
 
 update: function(req, res){
   Bucket.findbyIdAndUpdate(req.params.id, function(err, bucket){
