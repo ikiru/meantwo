@@ -16,7 +16,13 @@ import { UserService } from "./user.service";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, DashboardComponent],
-  imports: [BrowserModule, NgbModule.forRoot(), FormsModule, HttpModule],
+  imports: [
+    BrowserModule,
+    NgbModule.forRoot(),
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
+  ],
   providers: [UserService],
   bootstrap: [AppComponent]
 })
